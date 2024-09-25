@@ -1,0 +1,65 @@
+<main>
+    <section id="section-1" class="section-1 w-full bg-greenBack" style="height: 100vh;">
+        <div class="hidden sm:block md:block text-bone absolute top-10 bottom-0 pb-10"
+        style="font-size: 25vh; font-weight: bolder; line-height: 22vh; margin-left: 5%; align-self: center;">
+            <p>RE</p>
+            <p>CE</p>
+            <p>TAS</p>
+        </div>
+        <div class="sm:hidden text-bone w-full flex justify-center pt-10" style="font-size: 20vw; line-height: 1.2; font-weight: bolder;">
+            RECETAS
+        </div>
+        <div class="flex-row w-full sm:absolute top-0 bottom-0 right-0 left-0 z-10" style="align-self: center;">
+            <div class="flex justify-center text-center w-full text-4xl p-2 text-bone" style="font-weight: bolder;">
+                <h1>¿Qué estas buscando?</h1>
+            </div>
+            <div class="flex justify-center w-full">
+                <div class="flex justify-between sm:w-5/12 sm:p-0 mt-10 sm:mt-0 shadow-md mx-5 mb-4 w-full bg-white rounded-md">
+                    <input
+                    type="text"
+                    id="email"
+                    name="search"
+                    placeholder="Ej: Quesadillas poblanas"
+                    class="w-full focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out rounded-l-md">
+                    <button
+                    class="justify-end inline-flex bg-pumpkin border-0 py-2 px-2 focus:outline-none text-lg m-1 rounded-md">
+                    <div class="flex text-bone">
+                        <div>
+                            Buscar
+                        </div>
+                        <div class="ms-3">
+                            <svg class="self-center" xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none">
+                                <path d="M25.375 22.5703L18.5894 16.026C19.6829 14.5769 20.2712 12.8305 20.2694 11.0384C20.2694 6.34764 16.3116 2.53125 11.4472 2.53125C6.58274 2.53125 2.625 6.34764 2.625 11.0384C2.625 15.7291 6.58274 19.5455 11.4472 19.5455C13.3057 19.5472 15.1168 18.9799 16.6195 17.9255L23.4062 24.4688L25.375 22.5703ZM11.4472 16.8587C10.2533 16.8588 9.0861 16.5174 8.09333 15.8779C7.10057 15.2383 6.32678 14.3292 5.86983 13.2656C5.41288 12.202 5.2933 11.0316 5.5262 9.90238C5.75909 8.7732 6.33402 7.73598 7.17826 6.92189C8.0225 6.1078 9.09813 5.55341 10.2691 5.32883C11.4401 5.10425 12.6539 5.21957 13.7569 5.6602C14.86 6.10083 15.8027 6.84698 16.466 7.80429C17.1292 8.7616 17.4832 9.88707 17.483 11.0384C17.4812 12.5814 16.8446 14.0608 15.7131 15.1519C14.5816 16.243 13.0474 16.8568 11.4472 16.8587Z" fill="#F6F6F6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-end absolute bottom-0 right-0">
+            <img class="w-1/2 sm:w-3/4" src="./assets/images/chef.png" alt="">
+        </div>
+        
+        <div class="absolute bottom-0 w-full">
+            <div class="flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="147" viewBox="0 0 147 147" fill="none">
+                    <path d="M20 66L73.5 119L127 66" stroke="#1D1D1D" stroke-opacity="0.5" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full" style="height: 100vh;">
+        <app-navbar></app-navbar>
+        <div class="pt-28 ps-7 pb-3 border-b-2">
+            <h1 class="text-3xl">Recetas populares</h1>
+        </div>
+
+        <div class="h-screen">
+            @for(recipe of recipes; track $index) {
+                <app-recipe-card [recipe]="recipe" />
+            }
+        </div>
+    </section>
+</main>

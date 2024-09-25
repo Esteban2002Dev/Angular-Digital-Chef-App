@@ -1,0 +1,29 @@
+<header class="sticky top-0 bg-bone w-full z-20 text-gray-600 body-font shadow-md">
+    <div class="container flex p-5 w-full">
+        <a class="flex w-full justify-start title-font font-medium text-gray-900" style="font-weight: bolder;">
+            <span class="ml-3 text-3xl">Virtual Chef</span>
+        </a>
+
+        <nav class="hidden sm:flex items-center justify-end w-full">
+            <a class="mr-5 hover:text-gray-900">Favoritos</a>
+            <a class="mr-5 hover:text-gray-900">Second Link</a>
+            <a class="mr-5 hover:text-gray-900">Third Link</a>
+            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+        </nav>
+        <button (click)="toggleMenu()" class="sm:hidden justify-end rounded-xl border p-2 focus:bg-gray-50">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+            </svg>
+        </button>
+    </div>
+    @if (isMenuOpen) {
+        <div class="bg-gray-100 p-4 sm:hidden">
+            <nav>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Favoritos</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Second Link</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Third Link</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Fourth Link</a>
+            </nav>
+        </div>
+    }
+</header>
