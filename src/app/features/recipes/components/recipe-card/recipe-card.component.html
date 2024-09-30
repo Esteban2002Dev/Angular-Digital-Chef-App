@@ -1,1 +1,16 @@
-<p>recipe-card works!</p>
+<div class="p-2 border-2 rounded-lg w-full min-h-56 shadow-sm overflow-hidden">
+    <div class="overflow-hidden rounded-md shadow-lg">
+        <img class="rounded-md" [src]="recipe.image" [alt]="recipe.name">
+    </div>
+    <div class="mt-2">
+        <h1 class="uppercase" style="font-weight: bold; line-height: 18px;">{{recipe.name}}</h1>
+        <h2 class="text-gray-600">{{recipe.ingredients.length}} ingredientes.</h2>
+    </div>
+    <div class="w-full flex justify-end mt-4">
+        <button
+        (click)="viewRecipe(recipe.id)"
+        class="text-white bg-pumpkin hover:opacity-95 border-0 py-2 px-4 rounded-full text-sm">
+            Ver receta
+        </button>
+    </div>
+</div>

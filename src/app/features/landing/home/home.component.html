@@ -52,11 +52,11 @@
 
     <section class="w-full" style="height: 100vh;">
         <app-navbar></app-navbar>
-        <div class="pt-28 ps-7 pb-3 border-b-2">
+        <div class="pt-8 ps-7 pb-3 border-b-2">
             <h1 class="text-3xl">Recetas populares</h1>
         </div>
 
-        <div class="h-screen">
+        <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-2 mx-2 my-5">
             @for(recipe of recipes; track $index) {
                 <app-recipe-card [recipe]="recipe" />
             }

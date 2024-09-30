@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RecipeCardComponent } from "../../recipes/components/recipe-card/recipe-card.component";
-import { Recipe } from '../../../data/recipes/recipe';
+import { Recipe } from '../../../data/recipes/interfaces/recipe';
 import { NavbarComponent } from "../../../layouts/landing/components/navbar/navbar.component";
+import { fakeRecipes } from '../../../data/recipes/fakeData';
 
 @Component({
   selector: 'app-home',
@@ -11,33 +12,5 @@ import { NavbarComponent } from "../../../layouts/landing/components/navbar/navb
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  public recipes: Recipe[] = [
-    {
-      category: 'Miedo',
-      description: 'asdasdas asd asd asdas dasdasd',
-      ingredients: [
-        'cebolla',
-        'ajo'
-      ],
-      name: 'quesadillas de ajo y cebollla'
-    },
-    {
-      category: 'Miedo',
-      description: 'asdasdas asd asd asdas dasdasd',
-      ingredients: [
-        'cebolla',
-        'ajo'
-      ],
-      name: 'quesadillas de ajo y cebollla'
-    },
-    {
-      category: 'Miedo',
-      description: 'asdasdas asd asd asdas dasdasd',
-      ingredients: [
-        'cebolla',
-        'ajo'
-      ],
-      name: 'quesadillas de ajo y cebollla'
-    },
-  ]
+  public recipes = fakeRecipes;
 }
