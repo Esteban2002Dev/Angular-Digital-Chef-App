@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Recipe } from '../../../../data/recipes/recipe';
+import { Recipe } from '../../../../data/recipes/interfaces/recipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-card',
@@ -13,9 +14,17 @@ export class RecipeCardComponent {
     category: '',
     description: '',
     ingredients: [],
-    name: ''
+    name: '',
+    image: '',
+    id: '',
+    steps: []
   };
-  constructor() {}
+  constructor(
+    private _router: Router
+  ) {}
 
+  public viewRecipe(recipeId: string) {
+    this._router.navigate(['app/recipes/details', recipeId]);
+  }
   
 }

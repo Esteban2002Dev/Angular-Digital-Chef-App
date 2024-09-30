@@ -1,14 +1,14 @@
 <header class="sticky top-0 bg-bone w-full z-20 text-gray-600 body-font shadow-md">
     <div class="container flex p-5 w-full">
         <a class="flex w-full justify-start title-font font-medium text-gray-900" style="font-weight: bolder;">
-            <span class="ml-3 text-3xl">Virtual Chef</span>
+            <span [routerLink]="['/app/land/home']" class="ml-3 text-3xl cursor-pointer">Virtual Chef</span>
         </a>
 
         <nav class="hidden sm:flex items-center justify-end w-full">
-            <a class="mr-5 hover:text-gray-900">Favoritos</a>
-            <a class="mr-5 hover:text-gray-900">Second Link</a>
-            <a class="mr-5 hover:text-gray-900">Third Link</a>
-            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+            <a [routerLink]="['/app/land/home']" routerLinkActive="text-pumpkin border-b-2" class="mr-5 hover:text-gray-900 cursor-pointer">Inicio</a>
+            <a class="mr-5 hover:text-gray-900 cursor-pointer">Favoritos</a>
+            <a class="mr-5 hover:text-gray-900 cursor-pointer">Third Link</a>
+            <a [routerLink]="['/app/land/about-us']" routerLinkActive="text-pumpkin border-b-2"  class="mr-5 hover:text-gray-900 cursor-pointer">About us</a>
         </nav>
         <button (click)="toggleMenu()" class="sm:hidden justify-end rounded-xl border p-2 focus:bg-gray-50">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

@@ -10,6 +10,10 @@ export const routes: Routes = [
                 loadChildren: () => import('./layouts/landing/main.routes').then((m) => m.mainRoutes),
             },
             {
+                path: 'recipes',
+                loadChildren: () => import('./features/recipes/recipes.routes').then((m) => m.recipesRoutes),
+            },
+            {
                 path: '**',
                 redirectTo: 'land'
             }

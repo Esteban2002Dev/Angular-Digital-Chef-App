@@ -6,6 +6,10 @@ export const mainRoutes: Routes = [
         loadComponent: () => import ('../../features/landing/home/home.component').then(m => m.HomeComponent)
     },
     {
+        path: 'about-us',
+        loadComponent: () => import('../../features/landing/about-us/about-us.component').then(m => m.AboutUsComponent)
+    },
+    {
         path: '**',
         redirectTo: 'home'
     }
